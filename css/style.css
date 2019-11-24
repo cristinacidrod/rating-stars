@@ -1,0 +1,73 @@
+/* Style para el texto sin que influya en la página */
+
+#neonText {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Calistoga', cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: #ccffee;
+  text-shadow: 0px 0px 20px #006767, 0px 0px 20px #006767;
+  background: transparent;
+}
+
+#neonText:hover {
+  text-shadow: none;
+  color: #004e4e;
+}
+
+/* Styles para el fondo y los iconos con flexbox */
+
+body {
+  overflow: hidden;
+  margin: 0;
+  background-color: #000A0A;
+  background: #000A0A;
+  background: -moz-linear-gradient(top, #000A0A 0%, #002121 85%, #002929 100%);
+  background: -webkit-linear-gradient(top, #000A0A 0%, #002121 85%, #002929 100%);
+  background: linear-gradient(to bottom, #000A0A 0%, #002121 85%, #002929 100%);
+}
+
+.starsBox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.starsIcon {
+  display: inline-block;
+  font-size: 5rem;
+  font-weight: normal;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  color: #004e4e;
+}
+
+/* Animación para cambiar el color de los iconos con CSS */
+
+.starsBox > i:hover:before,
+.starsBox > i:hover ~ i:before {
+  position: absolute;
+  color: #ccffee;
+  animation: colorChange;
+  animation-duration: 1.5s;
+}
+
+@keyframes colorChange {
+  from {color: #003434;}
+  to {color: #ccffee;}
+}
+
+/* Class para rellenar los iconos con JS */
+
+.fill {
+  font-weight: bolder;
+  color: #ccffee;
+}
